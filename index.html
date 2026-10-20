@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>VitrinKodu.com.tr | Fiziksel Dükkanınız Akşam Kapanır, Dijital Vitrininiz 7/24 Açık Kalır - Türkiye Geneli 81 İl</title>
+<meta name="description" content="Türkiye'nin her yerinden kurumsal web tasarım. Işık hızında bulut altyapı, %100 mobil uyum, SEO, 0.8s açılış. 8.500 TL'den başlayan her şey dahil paketler. Panel bizden, müşteri dokunmuyor. 0553 166 27 31">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070e1e;--bg2:#0b172e;--card:#0f1d38;--card2:#122141;--cyan:#00d4ff;--cyan2:#22d3ee;--white:#f8fafc;--muted:#d1d5db;--muted2:#a1a1aa;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
+h1,h2,h3{font-family:'Sora',sans-serif;letter-spacing:-0.03em}
+.mono{font-family:'JetBrains Mono',monospace}
+.grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+.glow{position:fixed;width:600px;height:600px;background:radial-gradient(circle, rgba(6,182,212,0.15), transparent 70%);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none;z-index:0}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+header{position:sticky;top:0;z-index:50;background:rgba(7,14,30,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,212,255,0.12)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-family:'Sora';font-size:20px}
+.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--cyan),#0ea5e9);border-radius:9px;display:grid;place-items:center;color:#00131a;font-weight:800;box-shadow:0 0 20px rgba(0,212,255,0.4)}
+.badge{display:inline-flex;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.22);color:var(--cyan);font-size:12px;letter-spacing:0.08em;text-transform:uppercase}
+.dot{width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 10px var(--cyan);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.5}}
+.hero{padding:42px 0 24px;text-align:center}
+.hero h1{font-size:42px;line-height:1.05;font-weight:800;max-width:760px;margin:22px auto 18px}
+.hero h1 span.grad{background:linear-gradient(90deg,var(--cyan),#3b82f6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:16px;line-height:1.65;max-width:640px;margin:0 auto 28px}
+.hero p a{color:var(--cyan2);text-decoration:underline;text-underline-offset:4px}
+.cta-row{display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;margin:0 auto 28px;max-width:520px}
+.btn{height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;width:100%;border:1px solid transparent}
+.btn-white{background:var(--white);color:#0a1220;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.btn-ghost{background:rgba(255,255,255,.04);border-color:rgba(0,212,255,.22);color:var(--white)}
+.stats{grid-template-columns:1fr 1fr;display:grid;gap:12px;max-width:720px;margin:24px auto 0}
+.stat{background:linear-gradient(180deg, rgba(15,29,56,.9), rgba(12,23,45,.9));border:1px solid rgba(0,212,255,.12);border-radius:20px;padding:18px 16px}
+.stat b{font-family:'Sora';font-size:15px;display:flex;gap:8px;margin-bottom:6px}
+.stat span{color:var(--muted2);font-size:13px}
+.section{padding:48px 0}
+.section-label{color:var(--cyan);font-family:'JetBrains Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.section h2{font-size:32px;line-height:1.15;margin-bottom:12px}
+.section p.lead{color:var(--muted);font-size:15px;line-height:1.65;max-width:640px;margin-bottom:22px}
+.cards{display:grid;grid-template-columns:1fr;gap:14px}
+.card{background:var(--card);border:1px solid rgba(0,212,255,.12);border-radius:20px;padding:20px}
+.card:hover{border-color:rgba(0,212,255,.28);transform:translateY(-2px);transition:.2s}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.card-icon{width:44px;height:44px;border-radius:12px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.18);display:grid;place-items:center;color:var(--cyan)}
+.tag{font-family:'JetBrains Mono';font-size:10px;padding:5px 9px;border-radius:999px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.22);color:var(--cyan)}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:14px}
+.check{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.check li{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:13px}
+.check li::before{content:"✓";width:20px;height:20px;border-radius:50%;background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.2);color:var(--cyan);display:grid;place-items:center;font-size:11px;font-weight:700;flex-shrink:0}
+.card-cta{height:48px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(0,212,255,.18);color:var(--white);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:14px;text-decoration:none}
+.pricing{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+.price-card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid rgba(0,212,255,.14);border-radius:24px;padding:22px;position:relative}
+.price-card.popular{border-color:var(--cyan);box-shadow:0 0 0 1px var(--cyan), 0 0 32px rgba(0,212,255,.18)}
+.pop-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--cyan),#0ea5e9);color:#00131a;font-weight:800;font-size:11px;padding:6px 12px;border-radius:999px}
+.price{font-family:'Sora';font-size:36px;font-weight:800}
+.price small{font-size:13px;color:var(--muted2);font-weight:500}
+.divider{height:1px;background:rgba(0,212,255,.1);margin:16px 0}
+.trust{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
+.trust-item{display:flex;gap:12px;background:rgba(15,29,56,.6);border:1px solid rgba(0,212,255,.1);border-radius:16px;padding:16px}
+.footer{padding:36px 0;border-top:1px solid rgba(0,212,255,.1);margin-top:24px;color:var(--muted2);font-size:13px;line-height:1.6}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(7,14,30,.92);backdrop-filter:blur(16px);border-top:1px solid rgba(0,212,255,.22);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;transform:translateY(100%);transition:.3s}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta .btn{height:52px;font-size:14px}
+.fab{position:fixed;right:16px;bottom:96px;z-index:55;display:flex;flex-direction:column;gap:12px}
+.fab a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.4);text-decoration:none}
+.fab-phone{background:linear-gradient(135deg,var(--cyan),#0ea5e9);color:#00131a}
+.fab-wa{background:#25D366;color:white}
+@media(min-width:768px){.hero h1{font-size:56px}.cta-row{flex-direction:row}.btn{width:auto}.stats{grid-template-columns:repeat(4,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:repeat(3,1fr)}.trust{grid-template-columns:repeat(3,1fr)}.fab{bottom:24px}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div class="glow"></div>
+<header><div class="container"><div class="nav"><div class="logo"><div class="logo-mark">VK</div> vitrin<span style="color:var(--cyan)">kodu</span><span style="font-size:11px;color:var(--muted2);margin-left:6px" class="mono">.com.tr</span></div><div class="mono" style="font-size:11px;color:var(--muted2)">TÜRKİYE GENELİ • 81 İL</div></div></div></header>
+<div class="container">
+<section class="hero">
+<div class="badge"><span class="dot"></span> TÜRKİYE GENELİ • 81 İLE HİZMET • 2026</div>
+<h1>Fiziksel Dükkanınız<br>Akşam Kapanır.<br><span class="grad">Dijital Vitrininiz<br>7/24 Açık Kalır!</span></h1>
+<p>Türkiye'nin her yerinden <a href="#fiyatlar">kurumsal web tasarım</a> hizmeti. Işık hızında bulut altyapı, %100 mobil uyum, SEO. Vitrin ve Kod - Temeli sağlam atarız. Müşteri hiç dokunmuyor, panel bizden.</p>
+<div class="cta-row">
+<a class="btn btn-white" href="#fiyatlar">Fiyatları Gör → 8.500 TL'den</a>
+<a class="btn btn-ghost" href="#demolar">Demoları İncele</a>
+</div>
+<div class="stats">
+<div class="stat"><b>⚡ Işık Hızında</b><span>Cloudflare • 0.8s LCP</span></div>
+<div class="stat"><b>📱 %100 Mobil</b><span>SEO Uyumlu • Inter+Sora</span></div>
+<div class="stat"><b>📍 81 İl</b><span>Gerçek şehirli demolar</span></div>
+<div class="stat"><b>🛡️ Destek</b><span>WhatsApp • 0553 166 27 31</span></div>
+</div>
+</section>
+
+<section class="section" id="demolar">
+<div class="section-label">/ ŞABLONLAR — TÜRKİYE GENELİ — GERÇEK MANTIK</div>
+<h2>İşine göre vitrin.<br>Hepsi tek sayfa, hepsi hızlı.</h2>
+<p class="lead">Her şablon mobil öncelikli, gerçek müşteri hizmetli, filtreli, hesaplayıcılı. Fotoğraflarını, metnini ve konumunu gönder, kalanı biz hallediyoruz. Kod yok, panel derdi yok — panel bizden.</p>
+<div class="cards">
+<div class="card"><div class="card-top"><div class="card-icon">🏢</div><div class="tag">Ankara Çankaya • İMALATTA: 3</div></div><h3>Kurumsal</h3><p>Hizmet sektörü, ofisler için güven veren sade hızlı.</p><ul class="check"><li>Hizmet listesi gerçek</li><li>Referanslar şehirli</li><li>İletişim haritası</li></ul><a class="card-cta" href="master/sites/kurumsal/">CANLI GÖR ↗</a></div>
+<div class="card"><div class="card-top"><div class="card-icon">🍽️</div><div class="tag">Gaziantep • EN ÇOK TERCİH</div></div><h3>Restoran</h3><p>Menü, günlük kampanya ve WhatsApp sipariş. QR ile açılır.</p><ul class="check"><li>Dijital menü filtreli</li><li>Fotoğraf galeri gerçek</li><li>Rezervasyon</li></ul><a class="card-cta" href="master/sites/restoran/">CANLI GÖR ↗</a></div>
+<div class="card"><div class="card-top"><div class="card-icon">🏠</div><div class="tag">Ankara Etimesgut</div></div><h3>Emlak</h3><p>İlan vitrini, filtreli arama ve danışman profili.</p><ul class="check"><li>İlan kartları şehirli</li><li>Konum etiketi</li><li>Danışman</li></ul><a class="card-cta" href="master/sites/emlak/">CANLI GÖR ↗</a></div>
+<div class="card"><div class="card-top"><div class="card-icon">✂️</div><div class="tag">Diyarbakır Kayapınar</div></div><h3>Berber</h3><p>Fiyat listesi, saatler ve randevu. Tıraş kadar net.</p><ul class="check"><li>Fiyat listesi</li><li>Galeri</li><li>Randevu CTA</li></ul><a class="card-cta" href="master/sites/berber/">CANLI GÖR ↗</a></div>
+<div class="card"><div class="card-top"><div class="card-icon">💇‍♀️</div><div class="tag">İstanbul Kadıköy</div></div><h3>Kadın Kuaförü</h3><p>Hizmet + Usta + Saat seçici. Gerçek mantık.</p><ul class="check"><li>Usta seçimi</li><li>Saat seçimi</li><li>Fiyat dinamik</li></ul><a class="card-cta" href="master/sites/kadin-kuaforu/">CANLI GÖR ↗</a></div>
+<div class="card"><div class="card-top"><div class="card-icon">💅</div><div class="tag">İzmir Alsancak</div></div><h3>Güzellik Salonu</h3><p>Cilt, lazer, kalıcı makyaj. Gerçek galeri.</p><ul class="check"><li>Hizmet detaylı</li><li>Önce/sonra</li><li>WhatsApp</li></ul><a class="card-cta" href="master/sites/guzellik-salonu/">CANLI GÖR ↗</a></div>
+<div class="card"><div class="card-top"><div class="card-icon">⚖️</div><div class="tag">Bursa Nilüfer</div></div><h3>Avukat</h3><p>Dava türü seçici, makale, randevu.</p><ul class="check"><li>Dava filtre</li><li>Makale SEO</li><li>Form</li></ul><a class="card-cta" href="master/sites/avukat/">CANLI GÖR ↗</a></div>
+<div class="card"><div class="card-top"><div class="card-icon">🦷</div><div class="tag">Antalya Lara</div></div><h3>Diş Kliniği</h3><p>Tedavi + taksit hesaplayıcı.</p><ul class="check"><li>Tedavi filtre</li><li>Taksit hesap</li><li>Randevu</li></ul><a class="card-cta" href="master/sites/dis-klinigi/">CANLI GÖR ↗</a></div>
+</div>
+<p style="margin-top:16px;color:var(--muted2);font-size:13px">→ Tüm 20 demo /master/sites/ altında, hepsi tek sayfa 1.2sn altı, Google haritalı, WhatsApp'lı, gerçek hizmetli, stok değil.</p>
+</section>
+
+<section class="section" id="fiyatlar">
+<div class="badge">FABRİKA FİYATI — ARACI YOK — HER ŞEY DAHİL</div>
+<h2 style="margin-top:14px">Esnaf dostu, tek kalem.<br>Vitrin ve Kod.</h2>
+<p class="lead">Gizli ücret yok, aylık sürpriz yok. Bir kere kuruyoruz, yılda bir kez yeniliyoruz. Hosting, SSL, .com.tr yönlendirme dahil. Müşteri hiç dokunmuyor, panel bizden. 81 ile hizmet.</p>
+<div class="pricing">
+<div class="price-card"><div class="price-head"><h3>Başlangıç Vitrini</h3><div class="price">₺8.500 <small>Tek Sefer</small></div><div style="color:var(--muted2);font-size:12px;margin-top:6px">+ ₺2.500 / Yıl Yenileme • KDV Dahil</div></div><div class="divider"></div><ul class="check"><li>Tek Sayfa Landing Modern Tasarım</li><li>Hakkımızda / Hizmetler / Galeri / İletişim</li><li>WhatsApp Hızlı Buton</li><li>Google Harita & Konum</li><li>%100 Mobil Responsive Inter+Sora</li><li>3-5 İş Günü Teslimat</li><li>İlk Yıl Domain+Hosting+SSL Dahil</li><li>Yönetim Paneli Dahil</li></ul><a class="card-cta" style="background:var(--white);color:#0a1220" href="https://wa.me/905531662731?text=Başlangıç%208500">WhatsApp → 0553 166 27 31</a></div>
+<div class="price-card popular"><div class="pop-badge">POPÜLER</div><div class="price-head"><h3>Kurumsal Vitrin</h3><div class="price">₺16.500 <small></small></div><div style="color:var(--muted2);font-size:12px;margin-top:6px">+ ₺3.500 / Yıl • KDV Dahil</div></div><div class="divider"></div><ul class="check"><li>5-7 Sayfa Çoklu Tasarım</li><li>Detaylı İletişim & Teklif Formları</li><li>Kurumsal E-Posta</li><li>Gelişmiş SEO Altyapısı</li><li>Sosyal Medya Entegrasyonu</li><li>5-7 İş Günü Teslimat</li><li>Domain Hızlı Cloud Hosting SSL Dahil</li><li>Panel + Eğitim</li></ul><a class="card-cta" style="background:var(--cyan);color:#00131a" href="https://wa.me/905531662731?text=Kurumsal%2016500%20POPULER">WhatsApp → 0553 166 27 31</a></div>
+<div class="price-card"><div class="price-head"><h3>Pro Vitrin</h3><div class="price">₺35.000<small>'den</small></div><div style="color:var(--muted2);font-size:12px;margin-top:6px">+ ₺5.000 / Yıl • KDV Dahil</div></div><div class="divider"></div><ul class="check"><li>Sınırsız Sayfa & Ürün</li><li>Kategorili Katalog / Filtre</li><li>Blog & SSS</li><li>Teklif Toplama Sistemleri</li><li>İleri SEO + Hız</li><li>7-10 İş Günü Teslimat</li><li>Özel Yüksek Performans Hosting</li><li>Tam Panel + Eğitim + Destek</li></ul><a class="card-cta" href="https://wa.me/905531662731?text=Pro%2035000">WhatsApp → 0553 166 27 31</a></div>
+</div>
+<div class="trust">
+<div class="trust-item"><div style="width:36px;height:36px;border-radius:10px;background:rgba(0,212,255,.1);display:grid;place-items:center;color:var(--cyan)">🌐</div><div><b style="font-family:Sora">.com.tr ile kurumsal güven</b><br><span style="color:var(--muted)">Şahıs değil, gerçek işletme izlenimi.</span></div></div>
+<div class="trust-item"><div style="width:36px;height:36px;border-radius:10px;background:rgba(0,212,255,.1);display:grid;place-items:center;color:var(--cyan)">⚡</div><div><b style="font-family:Sora">Fabrika gibi çalışıyoruz</b><br><span style="color:var(--muted)">Hata az, hız çok. Vitrin ve Kod.</span></div></div>
+<div class="trust-item"><div style="width:36px;height:36px;border-radius:10px;background:rgba(0,212,255,.1);display:grid;place-items:center;color:var(--cyan)">🛡️</div><div><b style="font-family:Sora">Kapandıktan sonra da açık</b><br><span style="color:var(--muted)">Fiyat görür, konum bulur, WhatsApp yazar.</span></div></div>
+</div>
+</section>
+
+<footer class="footer">
+<div style="display:flex;gap:12px;align-items:center;margin-bottom:14px"><div class="logo-mark">VK</div><b style="font-family:Sora;color:var(--white)">vitrinkodu.com.tr</b><span class="mono" style="font-size:11px">© 2026 • 81 İl</span></div>
+Küçük işletmeler için hızlı web sitesi fabrikası. Işık hızında bulut, %100 mobil, SEO. Vitrin ve Kod.<br><br>
+VK YAZILIM • Türkiye Geneli • WhatsApp 0553 166 27 31 • merhaba@vitrinkodu.com.tr<br>
+<div class="mono" style="font-size:11px;color:var(--muted2);margin-top:10px">TR • public_html / index.html • fabrika aktif — 3 sipariş sırada • Inter + Sora + Mono • contrast 4.5:1 • thumb CTA aktif • 35k Pro</div>
+</footer>
+</div>
+
+<div class="fab"><a class="fab-phone" href="tel:+905531662731">📞</a><a class="fab-wa" href="https://wa.me/905531662731?text=Merhaba">💬</a></div>
+<div class="sticky-cta" id="sticky"><a class="btn btn-ghost" href="#demolar" style="height:52px">Demoları Gör</a><a class="btn btn-white" href="https://wa.me/905531662731" style="height:52px">HEMEN BAŞLAT → 0553 166 27 31</a></div>
+<script>
+const s=document.getElementById('sticky');
+window.addEventListener('scroll',()=>{if(window.scrollY>400)s.classList.add('show');else s.classList.remove('show')});
+</script>
+</body>
+</html>
