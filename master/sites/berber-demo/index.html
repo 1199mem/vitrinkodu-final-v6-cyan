@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Berber - Karaköprü Erkek Kuaförü</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>h1{font-family:'Bebas Neue',sans-serif; letter-spacing:2px} body{font-family:Inter,sans-serif}</style>
+</head>
+<body class="bg-[#111] text-white">
+<header class="border-b border-white/10">
+<div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+<div class="text-2xl tracking-widest">BARBER<span class="text-[#c8a45a]"> KÖPRÜ</span></div>
+<div class="text-xs text-white/50">KARAKÖPRÜ / 09:00 - 22:00</div>
+</div>
+</header>
+
+<section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
+<div>
+<h1 class="text-6xl leading-none">TIRAŞ<br><span class="text-[#c8a45a]">BİR RİTÜELDİR</span></h1>
+<div class="mt-8 border border-white/10 divide-y divide-white/10">
+<div class="flex justify-between p-4"><span>Saç + Sakal + Yıkama</span><span class="text-[#c8a45a]">400 TL</span></div>
+<div class="flex justify-between p-4"><span>Çocuk Tıraşı</span><span class="text-[#c8a45a]">250 TL</span></div>
+<div class="flex justify-between p-4"><span>Damat Tıraşı</span><span class="text-[#c8a45a]">800 TL</span></div>
+<div class="flex justify-between p-4"><span>Kaş + Burun</span><span class="text-[#c8a45a]">100 TL</span></div>
+</div>
+</div>
+
+<div class="bg-[#1a1a1a] border border-white/10 rounded-[24px] p-6">
+<h3 class="font-bold">✂️ Randevu Scripti - Berbere Özel</h3>
+<div class="mt-5 space-y-4">
+<div class="grid grid-cols-2 gap-3">
+<button onclick="selService(this,'Saç Sakal')" class="srv bg-white text-black py-3 rounded-xl text-sm font-bold">Saç + Sakal</button>
+<button onclick="selService(this,'Sadece Saç')" class="srv border border-white/20 py-3 rounded-xl text-sm">Sadece Saç</button>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button onclick="selBarber(this)" class="barber border border-white/20 py-2 rounded-full text-xs">Usta Ali</button>
+<button onclick="selBarber(this)" class="barber border border-white/20 py-2 rounded-full text-xs">Mehmet</button>
+<button onclick="selBarber(this)" class="barber border border-white/20 py-2 rounded-full text-xs">Farketmez</button>
+</div>
+<input id="bDate" type="date" class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 text-sm">
+<div class="grid grid-cols-4 gap-2 text-xs">
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">10:00</button>
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">11:30</button>
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">14:00</button>
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">16:30</button>
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">18:00</button>
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">19:30</button>
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">20:30</button>
+<button onclick="selTime(this)" class="time border border-white/20 py-2 rounded-lg">21:30</button>
+</div>
+<div class="bg-[#c8a45a]/10 border border-[#c8a45a]/20 rounded-xl p-3 text-xs text-[#c8a45a]"><span id="summary">Hizmet seç, saat seç</span></div>
+<button onclick="sendBarber()" class="w-full bg-[#c8a45a] text-black py-3 rounded-xl font-bold">WhatsApp'tan Onayla</button>
+</div>
+</div>
+</section>
+
+<script>
+let sService='', sBarber='', sTime='';
+function selService(el,v){document.querySelectorAll('.srv').forEach(b=>b.className='srv border border-white/20 py-3 rounded-xl text-sm'); el.className='srv bg-white text-black py-3 rounded-xl text-sm font-bold'; sService=v; update();}
+function selBarber(el){document.querySelectorAll('.barber').forEach(b=>b.className='barber border border-white/20 py-2 rounded-full text-xs'); el.className='barber bg-white text-black py-2 rounded-full text-xs'; sBarber=el.textContent; update();}
+function selTime(el){document.querySelectorAll('.time').forEach(b=>b.className='time border border-white/20 py-2 rounded-lg'); el.className='time bg-[#c8a45a] text-black py-2 rounded-lg'; sTime=el.textContent; update();}
+function update(){document.getElementById('summary').textContent = `${sService} | ${sBarber} | ${sTime}`;}
+function sendBarber(){
+ let d=document.getElementById('bDate').value;
+ let msg=`Berber randevu: ${sService}, Berber: ${sBarber}, Tarih: ${d} ${sTime} - Karaköprü`;
+ window.open('https://wa.me/905531662731?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body>
+</html>

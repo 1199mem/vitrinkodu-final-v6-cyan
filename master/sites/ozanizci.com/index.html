@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ozan İzci - Dil ve Konuşma Terapisti - Mersin</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>body{font-family:'Plus Jakarta Sans',sans-serif} h1,h2{font-family:Fraunces,serif}</style>
+</head>
+<body class="bg-[#fdf8f0] text-[#2b2b2b]">
+<header class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+<div class="font-bold text-lg">ozanizci.com <span class="text-[#6b8a6b]">• Mersin</span></div>
+<a href="#randevu" class="bg-[#2b2b2b] text-white px-5 py-2 rounded-full text-sm">Randevu Al</a>
+</header>
+
+<section class="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-10">
+<div>
+<h1 class="text-5xl leading-[0.95]">Çocuğunuz<br>konuşmuyorsa<br><span class="text-[#6b8a6b]">beklemeyin.</span></h1>
+<p class="mt-6 text-zinc-600">Mersin Yenişehir'de Dil ve Konuşma Terapisti. Gecikmiş konuşma, artikülasyon, kekemelik, down sendromu ve otizm spektrumunda bireysel terapi.</p>
+<div class="mt-8 flex gap-3">
+<div class="bg-white border rounded-2xl p-4 flex-1"><div class="text-2xl">👶</div><div class="text-sm font-bold mt-1">Çocuk</div><div class="text-xs text-zinc-500">2-12 yaş</div></div>
+<div class="bg-white border rounded-2xl p-4 flex-1"><div class="text-2xl">🧑</div><div class="text-sm font-bold mt-1">Yetişkin</div><div class="text-xs text-zinc-500">İnme sonrası afazi</div></div>
+<div class="bg-white border rounded-2xl p-4 flex-1"><div class="text-2xl">🏠</div><div class="text-sm font-bold mt-1">Mersin</div><div class="text-xs text-zinc-500">Yüzyüze + Online</div></div>
+</div>
+</div>
+
+<div id="randevu" class="bg-white rounded-[28px] border p-7 shadow-sm">
+<h3 class="font-bold">📅 Randevu Scripti - Sektöre Özel</h3>
+<div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+<div><label class="text-xs">Tarih</label><input id="date" type="date" class="w-full border rounded-xl px-3 py-2.5 mt-1"></div>
+<div><label class="text-xs">Saat</label><select id="time" class="w-full border rounded-xl px-3 py-2.5 mt-1"><option>09:00</option><option>10:30</option><option>13:00</option><option>14:30</option><option>16:00</option></select></div>
+</div>
+<div class="mt-4"><label class="text-xs">Çocuğun yaşı / Şikayet</label><input id="complaint" placeholder="Örn: 3.5 yaş, r ve k diyemiyor" class="w-full border rounded-xl px-3 py-3 mt-1 text-sm"></div>
+<div class="mt-4 p-3 bg-[#f3f6f0] rounded-xl text-xs text-[#6b8a6b]">✓ Seçtiğiniz saatte 45 dk ön görüşme, ücretli değerlendirme yok.</div>
+<button onclick="sendTherapy()" class="w-full mt-4 bg-[#6b8a6b] text-white py-3 rounded-full font-bold">WhatsApp'tan Onay Al</button>
+</div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 pb-16">
+<h2 class="text-2xl">Hizmetler</h2>
+<div class="grid md:grid-cols-3 gap-4 mt-6">
+<div class="bg-white border rounded-2xl p-5"><h4 class="font-bold">Artikülasyon</h4><p class="text-sm text-zinc-500 mt-2">r, s, ş, k, g sesleri</p></div>
+<div class="bg-white border rounded-2xl p-5"><h4 class="font-bold">Gecikmiş Konuşma</h4><p class="text-sm text-zinc-500 mt-2">2 yaş sonrası kelime yoksa</p></div>
+<div class="bg-white border rounded-2xl p-5"><h4 class="font-bold">Kekemelik</h4><p class="text-sm text-zinc-500 mt-2">Okul çağı ve yetişkin</p></div>
+</div>
+</section>
+
+<script>
+function sendTherapy(){
+ let d=document.getElementById('date').value, t=document.getElementById('time').value, c=document.getElementById('complaint').value;
+ let msg=`Merhaba Ozan Hocam, Mersin için ${d} ${t} randevu istiyorum. Şikayet: ${c}`;
+ window.open('https://wa.me/905531662731?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body>
+</html>

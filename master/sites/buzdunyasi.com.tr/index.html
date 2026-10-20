@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buzcu Urfa - Küp Buz Kalıp Buz | Urfa 45°C Biz -18°C</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@500&display=swap" rel="stylesheet">
+<style>h1{font-family:'Space Grotesk',sans-serif} body{font-family:Inter,sans-serif}</style>
+</head>
+<body class="bg-[#eefaff]">
+<header class="bg-white border-b sticky top-0 z-50"><div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"><div class="font-black text-xl">🧊 BUZCU <span class="text-cyan-600">URFA</span></div><div class="flex gap-2"><span class="bg-cyan-50 border border-cyan-200 px-3 py-1 rounded-full text-xs">0553 166 27 31</span><a href="https://wa.me/905531662731" class="bg-cyan-600 text-white px-4 py-1.5 rounded-full text-xs font-bold">SİPARİŞ VER</a></div></div></header>
+<section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
+<div><h1 class="text-6xl leading-[0.9] font-black">URFA<br>45°C İKEN<br><span class="text-cyan-600">BİZ -18°C</span><br>TESLİM EDİYORUZ</h1><p class="mt-4 text-slate-600">Karaköprü, Haliliye, Eyyübiye, Eyyübiye OSB'ye 45 dakikada hijyenik buz. Kalıp buz, küp buz, kırık buz, pipet buz.</p><div class="mt-6 grid grid-cols-2 gap-3 text-sm"><div class="bg-white border p-4 rounded-xl"><div class="font-bold">Kalıp Buz 20kg</div><div class="text-xs text-slate-500">Taziye, düğün, market</div><div class="font-bold mt-1">120 TL</div></div><div class="bg-white border p-4 rounded-xl"><div class="font-bold">Küp Buz 5kg</div><div class="text-xs text-slate-500">Restoran, kafe</div><div class="font-bold mt-1">80 TL</div></div></div></div>
+<div class="bg-white rounded-[28px] border shadow-xl p-6"><h3 class="font-bold text-lg">🧮 Kaç Kg Lazım? Hesapla</h3><div class="mt-4 space-y-4"><select id="bType" class="w-full border rounded-xl px-4 py-3 text-sm"><option value="dugun">Düğün / Nişan</option><option value="restoran">Restoran - Günlük</option><option value="taziye">Taziye / Mevlüt</option><option value="market">Market / Şarküteri</option></select><div><label class="text-xs font-bold">Kişi Sayısı: <span id="bCountVal">150</span></label><input id="bCount" type="range" min="20" max="500" value="150" class="w-full"></div><div class="bg-cyan-50 border border-cyan-200 rounded-xl p-4 flex justify-between items-center"><div><div class="text-xs">Önerilen Buz</div><div id="bKg" class="text-3xl font-black text-cyan-700">45 kg</div></div><div class="text-xs text-slate-600 text-right">Küp + Kalıp<br>45 dk teslim</div></div><button onclick="sendBuzUrfa()" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold">0553 166 27 31 - WhatsApp Sipariş</button></div></div>
+</section>
+<script>
+const bc=document.getElementById('bCount'), bcv=document.getElementById('bCountVal'), bkg=document.getElementById('bKg'), bt=document.getElementById('bType');
+function calcB(){let c=parseInt(bc.value);bcv.textContent=c;let m=bt.value==='dugun'?0.3:bt.value==='restoran'?0.15:bt.value==='taziye'?0.2:0.5; bkg.textContent=Math.ceil(c*m)+' kg';}
+bc.addEventListener('input',calcB); bt.addEventListener('change',calcB); calcB();
+function sendBuzUrfa(){let msg=`Merhaba Buzcu Urfa, ${bt.value} için ${bkg.textContent} buz lazım. Adres: `; window.open('https://wa.me/905531662731?text='+encodeURIComponent(msg),'_blank');}
+</script>
+</body>
+</html>
